@@ -1,8 +1,28 @@
+@font-face {
+    font-family: "hello_paris_extralight";
+    src: url(./fonts/HELLO\ PARIS\ SANS\ EXTRALIGHT.TTF)format("truetype");
+}
+
+@font-face {
+    font-family: "bigilla";
+    src: url(./fonts/BIGILLA.OTF);
+}
+
+@font-face {
+    font-family: "vegawanti";
+    src: url(./fonts/VEGAWANTY.TTF)format("truetype");
+}
+
+@font-face {
+    font-family: "gilroy";
+    src: url(./fonts/Gilroy-Regular.ttf)format("truetype");
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Hello Paris Sans ExtraLight";
+    font-family: hello_paris_extralight;
 }
 
 html,
@@ -141,7 +161,7 @@ body::-webkit-scrollbar {
 
 #scomp h2 {
     font-size: 3vw;
-    font-family: "Vegawanty";
+    font-family: vegawanty;
     color: orangered;
     margin-bottom: -1vw;
 }
@@ -354,7 +374,7 @@ body::-webkit-scrollbar {
 
 .mctext h1 {
     font-size: 4vw;
-    font-family: "gilroy";
+    font-family: gilroy;
     line-height: 4.5vw;
 }
 
