@@ -1,9 +1,10 @@
 function textsplitter() {
     document.querySelectorAll("#s1text h1").forEach(function (text) {
         textclutter = "";
-        console.log(text.textContent.split(""))
 
+        // console.log(text.textContent.split(""))
         // textclutter += <span></span>
+
         text.textContent.split("").forEach(function (letter) {
             textclutter += `<span>${letter}</span>`
         })
@@ -61,15 +62,15 @@ function slide2() {
         scrollTrigger: {
             trigger: "#slide2",
             // markers: true,
-            end:"100% 20%",
+            end: "100% 20%",
             scrub: 2,
         }
     });
     s2tl
-    .to("#photoseries",{
-        x: "-30%",
-        ease: Circ,
-    },"c")
+        .to("#photoseries", {
+            x: "-30%",
+            ease: Circ,
+        }, "c")
     // .from("#horitext h1", {
     //     x: "-40%",
     //     ease: Circ
@@ -149,14 +150,20 @@ function slide4() {
 
     s4.forEach(function (a) {
         a.addEventListener("mousemove", function (elements) {
+
             a.lastElementChild.style.opacity = "1"
-            // console.log(elements.screenX*.4,elements.screenY)
             a.lastElementChild.style.left = (elements.screenX) * .9 + "px";
             a.lastElementChild.style.transform = `rotate(${elements.screenX * .05}deg) scale(${0.9 + elements.screenX * .001})`
+
+            // console.log(elements.screenX,elements.screenY)
         })
+
         a.addEventListener("mouseout", function () {
             a.lastElementChild.style.opacity = "0"
         })
+    })
+    window.addEventListener("mousemove", function (details) {
+        console.log(details.screenX)
     })
 }
 

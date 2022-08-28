@@ -190,6 +190,15 @@ body::-webkit-scrollbar {
     overflow: hidden;
 }
 
+#s2buffertop {
+    display: none;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 13vh;
+    background-image: linear-gradient(#0a0b0e, #0f1013);
+}
+
 #photoseries {
     height: 65vh;
     width: 200%;
@@ -429,4 +438,89 @@ body::-webkit-scrollbar {
     transform: translate(0%, 0%);
     height: 20vw;
     transition: cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+
+@media screen and (max-width:500px) {
+
+    #navleft,
+    #navright {
+        display: none;
+    }
+
+    #nav {
+        height: 13vh;
+    }
+
+    #s1center {
+        top: 48%;
+    }
+
+    #s1circle {
+        width: 38vw;
+        height: 38vw;
+    }
+
+    #s1circle h1 {
+        font-size: 21vw;
+        line-height: 12vw;
+    }
+
+    #bordercircle {
+        height: 80vw;
+        width: 80vw;
+    }
+
+    #bcnav {
+        bottom: 11%;
+        /* background-color: #fff; */
+        height: 22vw;
+        width: 90vw;
+    }
+
+    #scomp h2 {
+        font-size: 6vw;
+    }
+
+    #scomp h5 {
+        font-size: 3.5vw;
+    }
+
+    /* secondpage */
+
+    #s1_2buffer {
+        display: none;
+    }
+
+    #s2buffertop {
+        display: initial;
+    }
+
+    #horitext h1 {
+        font-size: 20vw;
+    }
+
+    #horitext,
+    #photoseries {
+        top: 50%;
+    }
+
+    /* third page */
+
+
+
+
+    /* fourth page */
+
+    #s4option{
+        height: 20vw;
+    }
+
+    #s4option h1{
+        font-size: 15vw;
+    }
+
+    #s4option img{
+       height: 40vw; 
+    }
+
 }
