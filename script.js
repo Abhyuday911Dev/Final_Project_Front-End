@@ -88,9 +88,9 @@ function slide3() {
                 // console.log(elemt)
                 // console.log(jets.target.id)
                 // console.log(jets.path[1])
-                console.log(jets.target)
+                // console.log(jets)
 
-                gsap.to(jets.path[1], {
+                gsap.to(jets.target.offsetParent, {
                     width: "4vw",
                     ease: Expo.out,
                     duration: 1.5
@@ -137,7 +137,7 @@ function slide3() {
                     opacity: 1,
                     delay: 0.5,
                     ease: Expo.out,
-                })
+                }) 
             }
 
 
@@ -151,9 +151,19 @@ function slide4() {
     s4.forEach(function (a) {
         a.addEventListener("mousemove", function (elements) {
 
+            left = (elements.screenX) * .4 + "%";
+            rotatee = `${elements.screenX * .03}deg `
+
             a.lastElementChild.style.opacity = "1"
-            a.lastElementChild.style.left = (elements.screenX) * .9 + "px";
-            a.lastElementChild.style.transform = `rotate(${elements.screenX * .05}deg) scale(${0.9 + elements.screenX * .001})`
+            // a.lastElementChild.style.left = left;
+            // a.lastElementChild.style.transform = rotatee;
+            gsap.to(a.lastElementChild, {
+                x: left,
+                scale: `${0.9 + elements.screenX * .001}`,
+                rotate: rotatee,
+                // attr: { transform: `rotate(${elements.screenX * .05}deg) scale(${0.9 + elements.screenX * .001})` },
+                onComplete: console.log("hogya")
+            });
 
             // console.log(elements.screenX,elements.screenY)
         })
@@ -163,7 +173,7 @@ function slide4() {
         })
     })
     window.addEventListener("mousemove", function (details) {
-        console.log(details.screenX)
+        // console.log(details.screenX)
     })
 }
 
